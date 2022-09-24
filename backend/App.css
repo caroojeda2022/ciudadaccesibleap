@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --blue-color: #1da1f2;
+}
+
+body > div > header {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--blue-color);
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > form {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    width: 400px;
+}
+
+main > form > label {
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+main > form > input,
+main > form > button {
+    height: 30px;
+    padding: 0.2rem;
+}
+
+main > form > button {
+    margin-top: 2rem;
+}
+
+main > p {
+    font-size: 1.3rem;
+    margin: 2rem 0;
+}
+
+main > p.error {
+    color: red;
+}
+
+main > ul {
+    max-width: 800px;
+    list-style: none;
+}
+
+main > ul > li {
+    margin: 2rem 0;
+    border: 1px dashed black;
+    box-shadow: 5px 5px 5px solid;
+}
+
+main > ul > li > header {
+    padding: 1rem;
+    background-color: var(--blue-colors);
+}
+
+main > ul > li > header > time {
+    padding: 1rem;
+    color: blue;
+}
+
+main > ul > li > div {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+main > ul > li > div > img {
+    width: 50%;
+    align-self: center;
+    padding: 1rem 0;
+}
+
+main > ul > li > div > p {
+    margin-left: 1rem;
+}
+
+body > div > footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: white;
+    background-color: var(--blue-color);
+}

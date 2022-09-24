@@ -1,0 +1,31 @@
+main.issue-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+main.issue-search > form {
+  display: flex;
+  margin-top: 2rem;
+}
+
+main.issue-search > form > input {
+  height: 40px;
+  width: 250px;
+  padding: 0.2rem;
+  font-size: 1.3rem;
+  border: 1px solid rgb(118, 118, 118);
+}
+
+main.issue-search > form > button {
+  height: 40px;
+  padding: 0 0.4rem;
+  border: 1px solid rgb(118, 118, 118);
+  border-left: none;
+}
+
+ul.issue-list {
+  margin-top: 2rem;
+  list-style: none;
+}
