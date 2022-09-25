@@ -47,7 +47,7 @@ const {
   deleteIssue,
 } = require('./controllers/issues');
 
-// Crear un tweet.
+// Crear un issue.
 app.post('/issues', authUser, newIssue);
 
 // Listar todos los issues.

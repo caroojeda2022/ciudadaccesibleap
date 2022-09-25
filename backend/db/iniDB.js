@@ -11,7 +11,7 @@ async function main() {
         console.log('Borrando tablas existentes...');
 
         await connection.query('DROP TABLE IF EXISTS votes');
-        await connection.query('DROP TABLE IF EXISTS tweets');
+        await connection.query('DROP TABLE IF EXISTS Issues');
         await connection.query('DROP TABLE IF EXISTS users');
 
         console.log('Creando tablas...');
@@ -27,7 +27,7 @@ async function main() {
         `);
 
         await connection.query(`
-            CREATE TABLE tweets (
+            CREATE TABLE issues (
                 id INT PRIMARY KEY AUTO_INCREMENT,
                 idUser INT NOT NULL,
                 FOREIGN KEY (idUser) REFERENCES users(id),
@@ -43,8 +43,8 @@ async function main() {
                 value BOOLEAN DEFAULT true,
                 idUser INT NOT NULL,
                 FOREIGN KEY (idUser) REFERENCES users(id) ON DELETE CASCADE,
-                idTweet INT NOT NULL,
-                FOREIGN KEY (idTweet) REFERENCES tweets (id) ON DELETE CASCADE,
+                idIssue INT NOT NULL,
+                FOREIGN KEY (idIssue) REFERENCES issues (id) ON DELETE CASCADE,
                 createdAt TIMESTAMP NOT NULL
             )
         `);

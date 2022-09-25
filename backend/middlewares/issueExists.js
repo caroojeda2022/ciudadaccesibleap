@@ -7,11 +7,11 @@ const issueExists = async (req, res, next) => {
     try {
         connection = await getConnection();
 
-        // Obtenemos id del tweet.
+        // Obtenemos id del Issue.
         const { idIssue } = req.params;
 
         const [issues] = await connection.query(
-            `SELECT id FROM tweets WHERE id = ?`,
+            `SELECT id FROM issues WHERE id = ?`,
             [idIssue]
         );
 

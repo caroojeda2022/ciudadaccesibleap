@@ -13,7 +13,7 @@ const insertVoteQuery = async (idUser, idIssue) => {
 
         if (issues.length < 1) {
             await connection.query(
-                `INSERT INTO votes (idUser, idTweet, createdAt) VALUES (?, ?, ?)`,
+                `INSERT INTO votes (idUser, idIssue, createdAt) VALUES (?, ?, ?)`,
                 [idUser, idIssue, new Date()]
             );
 
